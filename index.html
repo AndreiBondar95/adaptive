@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slider</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/slick.css" />
+        <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    </head>
+    <body>
+        <div class="slider">
+            <div><img src="img/photo01.png" alt="foto" /></div>
+            <div><img src="img/photo02.png" alt="foto" /></div>
+            <div><img src="img/photo03.png" alt="foto" /></div>
+        </div>
+         <script src="jquery/jquery-1.9.1.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".slider").slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                });
+            });
+        </script>
+    </body>
+</html>
