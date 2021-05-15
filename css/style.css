@@ -299,6 +299,7 @@
 @media screen and (max-width: 375px) {
     /*Header*/
     #container {
+        overflow-x:hidden;
         width: 373px;
         padding: 0;
     }
