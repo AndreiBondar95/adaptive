@@ -1,15 +1,8 @@
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
     font-family: "Montserrat";
 }
-*,
-*:before,
-*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+body{
+    overflow-x:hidden;
 }
 /*Header top*/
 #container {
@@ -62,20 +55,15 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    vertical-align: top;
     padding-bottom: 42px;
 }
 .slogan {
     text-transform: uppercase;
-    margin: 0 auto;
     font-size: 40px;
     line-height: 49px;
     text-align: center;
-    vertical-align: top;
-    color: #000000;
     border-top: 1px solid #000000;
     border-bottom: 1px solid #000000;
-    max-width: 960px;
     padding: 10px 0px 10px 0px;
     margin-bottom: 60px;
 }
@@ -85,25 +73,30 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    max-width: 1024px;
     margin-bottom: 60px;
 }
 .subtitle-main {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 62%;
+    width: 500px;
     height: 394px;
     background: #000000;
     margin-right: 28px;
+    overflow: hidden;
+}
+.subtitle-main:last-child {
+    margin-right:0px;
+
 }
 .main-date {
     color: #ffffff;
     font-size: 50px;
     line-height: 100%;
+    font-weight:700;
 }
 .main-desc {
-    width: 400px;
+    padding:20px;
     font-size: 18px;
     line-height: 22px;
     color: #ffffff;
@@ -113,19 +106,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 960px;
     height: 120px;
     border: 1px solid #000000;
-    margin: 0 auto;
 }
 .input-footer {
-    width: 217px;
-    height: 22px;
+    width: 400px;
+    height: 30px;
+    border:none;
     font-size: 18px;
     line-height: 100%;
     text-align: center;
     margin-left: 30px;
     resize: none;
+    padding-top:15px;
 }
 .btn-footer {
     width: 200px;
@@ -138,6 +131,10 @@
     color: #ffffff;
     margin-right: 30px;
     text-transform: uppercase;
+    cursor: pointer;
+}
+.btn-footer:hover{
+    opacity:0.8;
 }
 @media screen and (max-width: 1024px) {
     #container {
@@ -227,7 +224,7 @@
 
     .header.menu-open .burger-icon-item:after {
         transform: rotate(-90deg);
-        bottom: -3px;
+        bottom: -2px;
     }
     .header.menu-open {
         width: 100%;
@@ -275,7 +272,6 @@
         font-size: 20px;
         line-height: 24px;
         padding: 0;
-        height: 160px;
     }
     /*Slogan*/
     .slogan {
@@ -292,14 +288,11 @@
     .main-desc {
         font-size: 18px;
         line-height: 22px;
-        width: 832px;
-        text-align: center;
     }
 }
 @media screen and (max-width: 375px) {
     /*Header*/
     #container {
-        overflow-x:hidden;
         width: 373px;
         padding: 0;
     }
@@ -348,31 +341,24 @@
         margin-left: 20px;
         margin-right: 20px;
     }
-    .wrapper-subtitle-main {
-    }
     .subtitle-main {
         width: 335px;
         margin: 0 auto;
         margin-bottom: 20px;
     }
+    .subtitle-main:last-child{
+        margin-right:inherit;
+
+    }
     .width_main {
         height: 276px;
-    }
-    .width_desc {
-        height: 236px;
     }
     .width_main_desc {
         height: 356px;
     }
-    .width_desc_main {
-        height: 316px;
-    }
     .main-desc {
-        width: 295px;
         font-size: 16px;
         line-height: 20px;
-    }
-    .main-date {
     }
     .text-wrap {
         border: none;
@@ -380,7 +366,6 @@
         margin: 0;
     }
     .input-footer {
-        padding-top: 10px;
         width: 335px;
         height: 150px;
         border: 1px solid;
@@ -396,12 +381,10 @@
     }
     /*Menu open*/
     #header.menu-open {
-        width: 100%;
         min-height: 332px;
         padding: 20px;
     }
     .header.menu-open .header-inner {
-        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -420,6 +403,7 @@
         display: block;
         font-size: 20px;
         line-height: 24px;
+        padding:0;
     }
     .header.menu-open + .main-container {
         padding-top: 0;
